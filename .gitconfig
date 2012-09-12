@@ -1,0 +1,25 @@
+[user]
+  name = Louis Clotman
+  email = louis@clotman.name
+[color]
+  diff = auto
+  status = auto
+  ranch = auto
+[color "diff"]
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  st = status
+  ci = commit -a
+  cl = clean -dfx
+  hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
