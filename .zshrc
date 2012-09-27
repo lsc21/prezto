@@ -40,5 +40,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Disable command auto-correct
 unsetopt correct_all
-
-PATH=$PATH:/usr/pkg/sbin:/usr/pkg/bin
