@@ -21,3 +21,7 @@
 .ssh
 .viminfo
 .vim
+.links/
+.macports/
+.vagrant.d/
+.w3m/
