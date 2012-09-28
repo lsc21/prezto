@@ -41,4 +41,4 @@ source $ZSH/oh-my-zsh.sh
 # Disable command auto-correct
 unsetopt correct_all
 
-export PATH=$PATH:/opt/local/bin
+export PATH=/opt/local/bin:$PATH
