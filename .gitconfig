@@ -1,6 +1,8 @@
 [user]
   name = Louis Clotman
-  email = louis@clotman.name
+	email = louis@clotman.name
+[core]
+	editor = vim
 [color]
   diff = auto
   status = auto
