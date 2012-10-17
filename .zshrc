@@ -42,3 +42,5 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 export PATH=/opt/local/bin:$PATH
+
+alias less="less -R"
