@@ -2,6 +2,7 @@
 " NOTE You can also reload it with :so $MYVIMRC
 
 call pathogen#infect('~/.vim/bundle')
+call pathogen#helptags()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
