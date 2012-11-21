@@ -35,6 +35,7 @@ au Syntax * syn match localWhitespaceError / \+\ze\t/ display
 " syntax highlighting
 au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
+au BufNewFile,BufRead *.yaml,*.yml set ft=yaml
 au! Syntax jade source /home/louis/.vim/syntax/jade.vim
 au! Syntax nginx source /home/louis/.vim/syntax/nginx.vim
 
