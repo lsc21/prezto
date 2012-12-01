@@ -27,6 +27,7 @@ set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set smartindent
 set wildmenu											" better command line completion
+set autoindent										" keep same indent as line you're on
 
 " highlight for evil trailing whitespace
 hi link localWhitespaceError Error
