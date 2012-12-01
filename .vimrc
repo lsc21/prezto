@@ -26,7 +26,6 @@ set tabstop=2											" The One True Tab (as of latest revision)
 set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set smartindent
-" set colorcolumn=80								" make the 80th column red
 
 " highlight for evil trailing whitespace
 hi link localWhitespaceError Error
