@@ -28,3 +28,4 @@
 .vagrant.d/
 .w3m/
 .cache
+.aptitude/
