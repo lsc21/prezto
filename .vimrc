@@ -26,6 +26,7 @@ set tabstop=2											" The One True Tab (as of latest revision)
 set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set smartindent
+set wildmenu											" better command line completion
 
 " highlight for evil trailing whitespace
 hi link localWhitespaceError Error
