@@ -25,6 +25,7 @@ set textwidth=79									" set normal border; can unset for coding
 set tabstop=2											" The One True Tab (as of latest revision)
 set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
+set modifiable										" modifiable buffers
 
 " syntax highlighting
 au BufRead,BufNewFile *.jade set filetype=jade
