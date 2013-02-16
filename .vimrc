@@ -26,11 +26,6 @@ set tabstop=2											" The One True Tab (as of latest revision)
 set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 
-" highlight for evil trailing whitespace
-hi link localWhitespaceError Error
-au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
-au Syntax * syn match localWhitespaceError / \+\ze\t/ display
-
 " syntax highlighting
 au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
@@ -45,12 +40,18 @@ iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 autocmd BufRead *.html,*.htm set ft=html
 autocmd BufRead *.php,*.php3 set ft=php
 autocmd BufRead *.pl set ft=perl
-autocmd BufRead *.tt2,*.tt set ft=tt2html
 autocmd BufRead *.js set ft=javascript.jquery
 
 " config for *ruby_runner.txt - https://github.com/henrik/vim-ruby-runner
 command! FR set filetype=ruby
 let g:RubyRunner_window_size = 15
 
-" Automatically remove trailing whitespace when saving
+
+" T R A I L I N G  W H I T E S P A C E
+" ------------------------------------
+" highlight them
+hi link localWhitespaceError Error
+au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
+au Syntax * syn match localWhitespaceError / \+\ze\t/ display
+" Automatically remove them upon saving
 autocmd BufWritePre * :%s/\s\+$//e
