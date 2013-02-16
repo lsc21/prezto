@@ -27,6 +27,9 @@ set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
 
+" Load fugitive if available
+set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+
 " syntax highlighting
 au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
