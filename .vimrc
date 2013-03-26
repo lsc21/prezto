@@ -33,7 +33,7 @@ set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
 " syntax highlighting
 au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
-au BufNewFile,BufRead *.yaml,*.yml set ft=yaml
+au BufNewFile,BufRead *.yaml,*.yml setf yaml
 au! Syntax jade source /home/louis/.vim/syntax/jade.vim
 au! Syntax nginx source /home/louis/.vim/syntax/nginx.vim
 
