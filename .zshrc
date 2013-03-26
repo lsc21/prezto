@@ -34,6 +34,6 @@ plugins=(git vi-mode rake ruby rails3 rvm)
 
 source		$ZSH/oh-my-zsh.sh
 unsetopt	correct_all # Disable command auto-correct
-export		PATH=/opt/local/bin:$PATH
+export		PATH=/opt/local/bin:$PATH:$HOME/.bin
 alias			less="less -R"
 alias			ack="ack-grep"
