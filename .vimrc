@@ -1,7 +1,7 @@
 " NOTE You can reload this file while editing it with ':so %'
 " NOTE You can also reload it with :so $MYVIMRC
 
-call pathogen#infect('~/.vim/bundle')
+execute pathogen#infect()
 call pathogen#helptags()
 
 syntax on													" Turn on syntax highlighting.
