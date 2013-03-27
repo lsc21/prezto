@@ -31,3 +31,5 @@
 .aptitude/
 .anyconnect
 .bin
+.vim/bundle
+.subversion
