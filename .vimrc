@@ -1,8 +1,9 @@
 " NOTE You can reload this file while editing it with ':so %'
 " NOTE You can also reload it with :so $MYVIMRC
 
-execute pathogen#infect()
+call pathogen#infect()
 call pathogen#helptags()
+call pathogen#incubate()
 
 syntax on													" Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
