@@ -31,8 +31,8 @@ set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
 
-" Load fugitive if available
-set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+" Load powerline
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " syntax highlighting
 au BufRead,BufNewFile *.jade set filetype=jade
