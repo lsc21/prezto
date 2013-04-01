@@ -32,6 +32,9 @@ set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
 set t_Co=256											" Use 256 colors
 
+let g:Powerline_theme='short'
+let g:Powerline_colorscheme='solarized256'
+
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
