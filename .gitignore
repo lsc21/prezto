@@ -23,6 +23,9 @@
 .smb
 .ssh
 .viminfo
+.vim/.VimballRecord
+.vim/.netrwhist
+.vim/doc/
 .links/
 .macports/
 .vagrant.d/
