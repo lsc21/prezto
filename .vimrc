@@ -30,6 +30,7 @@ set tabstop=2											" The One True Tab (as of latest revision)
 set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
+set t_Co=256											" Use 256 colors
 
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
