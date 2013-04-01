@@ -31,6 +31,9 @@ set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
 
+" Use ctrlp: http://kien.github.com/ctrlp.vim/
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Load powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
