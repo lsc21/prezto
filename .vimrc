@@ -21,7 +21,6 @@ set wildmode=list:longest         " Complete files like a shell.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 set wrap                          " Turn on line wrapping.
-set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set modeline                      " Allow per file config
 set encoding=utf-8								" UTF-8
@@ -32,8 +31,9 @@ set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
 set t_Co=256											" Use 256 colors
 
-let g:Powerline_theme='short'
-let g:Powerline_colorscheme='solarized256'
+" tabs instead of spaces
+set smartindent
+set expandtab
 
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
