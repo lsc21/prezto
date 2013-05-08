@@ -5,10 +5,20 @@ call pathogen#infect()
 call pathogen#helptags()
 call pathogen#incubate()
 
+" ++++++++++++++++++++++++++++++++++++++++
+" First, Get syntax highlighting right ...
+" ========================================
 syntax on													" Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
-set term=xterm-256color 					" xterm 256 color support
+" ++++++++++++++++++++++++++++++++++++++
+" ... then, get the colors dialed in ...
+" ======================================
+set background=dark               " dark background by default
+colorscheme solarized             " use solarized color scheme
+set term=xterm-256color           " tell vim that its terminal is 256-enabled
+set t_Co=256                      " force vim to use 256
+
 set encoding=utf-8								" utf-8 support
 set termencoding=utf-8						" Terminal utf-8 support
 set nocompatible                  " Must come first because it changes other options
@@ -30,7 +40,6 @@ set tabstop=2											" The One True Tab (as of latest revision)
 set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
-set t_Co=256											" Use 256 colors
 
 " tabs instead of spaces
 set smartindent
