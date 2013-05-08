@@ -50,12 +50,6 @@ au! Syntax nginx source /home/louis/.vim/syntax/nginx.vim
 " tag my comments with my name and date
 iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 
-" set filetypes based on suffixes
-autocmd BufRead *.html,*.htm set ft=html
-autocmd BufRead *.php,*.php3 set ft=php
-autocmd BufRead *.pl set ft=perl
-autocmd BufRead *.js set ft=javascript.jquery
-
 " config for *ruby_runner.txt - https://github.com/henrik/vim-ruby-runner
 command! FR set filetype=ruby
 let g:RubyRunner_window_size = 15
