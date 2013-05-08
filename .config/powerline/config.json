@@ -32,11 +32,12 @@
 			"theme": "default"
 		},
 		"vim": {
-			"colorscheme": "default",
+			"colorscheme": "solarized",
 			"theme": "default",
 			"local_themes": {
 				"cmdwin": "cmdwin",
-				"help": "help"
+				"help": "help",
+				"quickfix": "quickfix"
 			}
 		},
 		"wm": {
