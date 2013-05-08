@@ -43,10 +43,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " syntax highlighting
-au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
 au BufNewFile,BufRead *.yaml,*.yml setf yaml
-au! Syntax jade source /home/louis/.vim/syntax/jade.vim
 au! Syntax nginx source /home/louis/.vim/syntax/nginx.vim
 
 " tag my comments with my name and date
