@@ -11,7 +11,8 @@ filetype plugin indent on         " Turn on file type detection.
 set term=xterm-256color 					" xterm 256 color support
 set encoding=utf-8								" utf-8 support
 set termencoding=utf-8						" Terminal utf-8 support
-set nocompatible                  " Must come first because it changes other options.
+set nocompatible                  " Must come first because it changes other options
+set number                        " show line numbers
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
