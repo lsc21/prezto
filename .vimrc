@@ -54,9 +54,9 @@ iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 command! FR set filetype=ruby
 let g:RubyRunner_window_size = 15
 
-
-" T R A I L I N G  W H I T E S P A C E
-" ------------------------------------
+" +++++++++++++++++++++++++++++++++
+" Trailing Whitespace is the Devil!
+" =================================
 " highlight them
 hi link localWhitespaceError Error
 au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
