@@ -32,6 +32,8 @@ ZSH_THEME="robbyrussell"
 plugins=(git vi-mode rake ruby rails3 rvm)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+setopt    extendedhistory
+
 source		$ZSH/oh-my-zsh.sh
 unsetopt	correct_all # Disable command auto-correct
 export		PATH=/opt/local/bin:$PATH:$HOME/.bin
