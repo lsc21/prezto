@@ -41,6 +41,9 @@ set grepprg=ack\ -a								" use ack instead of grep
 set laststatus=2									" show statusbar
 set modifiable										" modifiable buffers
 
+" Folding
+set foldlevel=1
+
 " tabs instead of spaces
 set smartindent
 set expandtab
@@ -62,6 +65,13 @@ iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 " config for *ruby_runner.txt - https://github.com/henrik/vim-ruby-runner
 command! FR set filetype=ruby
 let g:RubyRunner_window_size = 15
+
+" +++++++++++++++++++++++++++++++++
+" Load & save views automatically
+" =================================
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 
 " +++++++++++++++++++++++++++++++++
 " Trailing Whitespace is the Devil!
