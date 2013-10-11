@@ -24,5 +24,6 @@
   st = status
   ci = commit -a
   cl = clean -dfx
-  hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+  hist = log --branches --remotes --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+  histall = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
   tt = timetrack
