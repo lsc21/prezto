@@ -51,9 +51,6 @@ set expandtab
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Load powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
 " syntax highlighting
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
 au BufNewFile,BufRead *.yaml,*.yml setf yaml
