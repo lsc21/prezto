@@ -47,6 +47,11 @@ set foldlevel=1
 " tabs instead of spaces
 set smartindent
 set expandtab
+set linespace=0
+
+" Don't use airline arrows
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
