@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git vi-mode rake ruby rails3 rvm)
+plugins=(git vi-mode rake ruby rails rvm)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 source		$ZSH/oh-my-zsh.sh
