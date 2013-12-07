@@ -36,7 +36,7 @@ setopt    extendedhistory
 
 source		$ZSH/oh-my-zsh.sh
 unsetopt	correct_all # Disable command auto-correct
-export		PATH=/opt/local/bin:$PATH:$HOME/.bin
+export		PATH=/data/louis/.local/bin:$HOME/.bin:$PATH
 alias			less="less -R"
 alias			ack="ack-grep"
 
