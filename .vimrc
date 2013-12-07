@@ -49,9 +49,15 @@ set smartindent
 set expandtab
 set linespace=0
 
-" Don't use airline arrows
+" configure vim-airline
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline_detect_paste = 1
+let g:airline_detect_iminsert = 0
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+let g:airline#extensions#whitespace#show_message = 1
+let g:airline#extensions#tabline#buffer_nr_show = 0
 
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
