@@ -39,3 +39,5 @@ unsetopt	correct_all # Disable command auto-correct
 export		PATH=/opt/local/bin:$PATH:$HOME/.bin
 alias			less="less -R"
 alias			ack="ack-grep"
+
+alias mutt='LOCAL_CONFIG=gmail /usr/bin/mutt'
