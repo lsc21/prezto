@@ -29,7 +29,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git vi-mode rake ruby rails3 rvm screen node npm)
+plugins=(git vi-mode rake ruby rails rvm screen node npm)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 setopt    extendedhistory
