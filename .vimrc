@@ -18,6 +18,7 @@ set background=dark               " dark background by default
 colorscheme solarized             " use solarized color scheme
 set term=xterm-256color           " tell vim that its terminal is 256-enabled
 set t_Co=256                      " force vim to use 256
+hi Normal ctermbg=NONE
 
 set encoding=utf-8								" utf-8 support
 set termencoding=utf-8						" Terminal utf-8 support
