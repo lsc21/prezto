@@ -40,3 +40,11 @@
 .mutt
 .muttrc
 .vim/view
+.offlineimap*
+.cpanm
+.mail
+.mailcap
+.local
+.npm
+.msmtp.log
+.node-gyp
