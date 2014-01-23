@@ -37,7 +37,8 @@ set shiftwidth=2                  " And again, related.
 set modeline                      " Allow per file config
 set encoding=utf-8                " UTF-8
 set textwidth=79                  " set normal border; can unset for coding
-set tabstop=2                      " The One True Tab (as of latest revision)
+set tabstop=2                     " The One True Tab (as of latest revision)
+set grepprg=ack\ -a               " use ack instead of grep
 set laststatus=2                  " show statusbar
 set modifiable                    " modifiable buffers
 
