@@ -1,0 +1,70 @@
+# Colors -----------------------------------------------------------------
+source ~/.mutt/colors/solarized-dark-16
+
+# Options ----------------------------------------------------------------
+unset arrow_cursor         # use arrow cursor
+unset askbcc               # don't prompt for bcc's
+unset askcc                # don't prompt for cc's
+unset beep                 # don't beep on error
+unset beep_new             # don't beep on new message
+set   bounce_delivered     # unset: remove Delivered-To: when bouncing?
+unset collapse_unread      # don't collapse threads with unread mails
+set   uncollapse_jump      # jump to unread message when uncollapse
+set   confirmappend        # may want to change this later
+set   copy                 # save copies of sent messages
+set   delete               # don't ask me to delete messages - just do it!
+set   edit_headers         # display the headers when I'm editing a message
+set   fast_reply           # don't prompt for stuff when replying
+set   followup_to          # add Mail-Followup-To header
+set   help                 # show help on first line of display
+unset mark_old             # don't mark unread messages as Old
+unset menu_scroll          # scroll menu a page on last line
+set   narrow_tree          # narrow threading trees
+set   pager_stop           # don't go to next message at end of message
+set   include              # include a copy of msg in reply
+set   reply_to             # ask to use the address listed in the Reply-To
+
+# Encryption -------------------------------------------------------------
+source ~/.mutt/muttrc.local.$LOCAL_CONFIG
+source ~/.gpg.rc
+
+set pgp_use_gpg_agent     = yes
+set pgp_sign_as           = 68B780AA
+set pgp_timeout           = 3600
+set crypt_autosign        = no
+set crypt_replyencrypt    = yes
+
+# Macros -----------------------------------------------------------------
+macro index E "<change-folder>+gmail/archive<enter><limit>~B " "search everything"
+macro index,pager A "<save-message>+gmail/archive<enter>" "move message to the archive"
+macro index D "<save-message>+gmail/trash<enter>" "move message to the trash"
+macro index S "<save-message>+gmail/spam<enter>" "mark message as spam"
+
+# Mailboxes --------------------------------------------------------------
+set mbox_type = Maildir
+set folder    = ~/.mail/
+set spoolfile = +gmail/INBOX
+mailboxes     = +gmail/INBOX \
+                +gmail/flagged \
+                +gmail/drafts \
+                +gmail/sent \
+                +gmail/spam \
+                +gmail/archive \
+                +gmail/BitBucket \
+                +gmail/Backups \
+                +gmail/Invoice \
+                +gmail/Business \
+                /var/spool/mail/louis
+
+# Pager View Options ----------------------------------------------------
+set pager_index_lines = 8  # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/enriched text/plain text/html text
+
+auto_view text/html
