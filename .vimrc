@@ -8,7 +8,7 @@ call pathogen#incubate()
 " ++++++++++++++++++++++++++++++++++++++++
 " First, Get syntax highlighting right ...
 " ========================================
-syntax on													" Turn on syntax highlighting.
+syntax on                          " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
 " ++++++++++++++++++++++++++++++++++++++
@@ -20,8 +20,8 @@ set term=xterm-256color           " tell vim that its terminal is 256-enabled
 set t_Co=256                      " force vim to use 256
 hi Normal ctermbg=NONE
 
-set encoding=utf-8								" utf-8 support
-set termencoding=utf-8						" Terminal utf-8 support
+set encoding=utf-8                " utf-8 support
+set termencoding=utf-8            " Terminal utf-8 support
 set nocompatible                  " Must come first because it changes other options
 set number                        " show line numbers
 set showcmd                       " Display incomplete commands.
@@ -35,11 +35,11 @@ set hlsearch                      " Highlight matches.
 set wrap                          " Turn on line wrapping.
 set shiftwidth=2                  " And again, related.
 set modeline                      " Allow per file config
-set encoding=utf-8								" UTF-8
-set textwidth=79									" set normal border; can unset for coding
-set tabstop=2											" The One True Tab (as of latest revision)
-set laststatus=2									" show statusbar
-set modifiable										" modifiable buffers
+set encoding=utf-8                " UTF-8
+set textwidth=79                  " set normal border; can unset for coding
+set tabstop=2                      " The One True Tab (as of latest revision)
+set laststatus=2                  " show statusbar
+set modifiable                    " modifiable buffers
 
 " Folding
 set foldlevel=1
