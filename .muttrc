@@ -24,37 +24,14 @@ set   pager_stop           # don't go to next message at end of message
 set   include              # include a copy of msg in reply
 set   reply_to             # ask to use the address listed in the Reply-To
 
-# Encryption -------------------------------------------------------------
+# Profile ---------------------------------------------------------------
 source ~/.mutt/muttrc.local.$LOCAL_CONFIG
-source ~/.gpg.rc
-
-set pgp_use_gpg_agent     = yes
-set pgp_sign_as           = 68B780AA
-set pgp_timeout           = 3600
-set crypt_autosign        = no
-set crypt_replyencrypt    = yes
 
 # Macros -----------------------------------------------------------------
 macro index E "<change-folder>+gmail/archive<enter><limit>~B " "search everything"
 macro index,pager A "<save-message>+gmail/archive<enter>" "move message to the archive"
 macro index D "<save-message>+gmail/trash<enter>" "move message to the trash"
 macro index S "<save-message>+gmail/spam<enter>" "mark message as spam"
-
-# Mailboxes --------------------------------------------------------------
-set mbox_type = Maildir
-set folder    = ~/.mail/
-set spoolfile = +gmail/INBOX
-mailboxes     = +gmail/INBOX \
-                +gmail/flagged \
-                +gmail/drafts \
-                +gmail/sent \
-                +gmail/spam \
-                +gmail/archive \
-                +gmail/BitBucket \
-                +gmail/Backups \
-                +gmail/Invoice \
-                +gmail/Business \
-                /var/spool/mail/louis
 
 # Pager View Options ----------------------------------------------------
 set pager_index_lines = 8  # number of index lines to show
