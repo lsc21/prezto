@@ -5,13 +5,25 @@ call pathogen#infect()
 call pathogen#helptags()
 call pathogen#incubate()
 
-syntax on													" Turn on syntax highlighting.
+" ++++++++++++++++++++++++++++++++++++++++
+" First, Get syntax highlighting right ...
+" ========================================
+syntax on                          " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
-set term=xterm-256color 					" xterm 256 color support
-set encoding=utf-8								" utf-8 support
-set termencoding=utf-8						" Terminal utf-8 support
-set nocompatible                  " Must come first because it changes other options.
+" ++++++++++++++++++++++++++++++++++++++
+" ... then, get the colors dialed in ...
+" ======================================
+set background=dark               " dark background by default
+colorscheme solarized             " use solarized color scheme
+set term=xterm-256color           " tell vim that its terminal is 256-enabled
+set t_Co=256                      " force vim to use 256
+hi Normal ctermbg=NONE
+
+set encoding=utf-8                " utf-8 support
+set termencoding=utf-8            " Terminal utf-8 support
+set nocompatible                  " Must come first because it changes other options
+set number                        " show line numbers
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
@@ -21,49 +33,58 @@ set wildmode=list:longest         " Complete files like a shell.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 set wrap                          " Turn on line wrapping.
-set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set modeline                      " Allow per file config
-set encoding=utf-8								" UTF-8
-set textwidth=79									" set normal border; can unset for coding
-set tabstop=2											" The One True Tab (as of latest revision)
-set grepprg=ack\ -a								" use ack instead of grep
-set laststatus=2									" show statusbar
-set modifiable										" modifiable buffers
-set t_Co=256											" Use 256 colors
+set encoding=utf-8                " UTF-8
+set textwidth=79                  " set normal border; can unset for coding
+set tabstop=2                     " The One True Tab (as of latest revision)
+set grepprg=ack-grep              " use ack instead of grep
+set laststatus=2                  " show statusbar
+set modifiable                    " modifiable buffers
 
-let g:Powerline_theme='short'
-let g:Powerline_colorscheme='solarized256'
+" Folding
+set foldlevel=1
+
+" tabs instead of spaces
+set smartindent
+set expandtab
+set linespace=0
+
+" configure vim-airline
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_detect_paste = 1
+let g:airline_detect_iminsert = 0
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+let g:airline#extensions#whitespace#show_message = 1
+let g:airline#extensions#tabline#buffer_nr_show = 0
 
 " Use ctrlp: http://kien.github.com/ctrlp.vim/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Load powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
 " syntax highlighting
-au BufRead,BufNewFile *.jade set filetype=jade
 au BufRead,BufNewFile /opt/local/etc/nginx/* set ft=nginx
 au BufNewFile,BufRead *.yaml,*.yml setf yaml
-au! Syntax jade source /home/louis/.vim/syntax/jade.vim
 au! Syntax nginx source /home/louis/.vim/syntax/nginx.vim
 
 " tag my comments with my name and date
 iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 
-" set filetypes based on suffixes
-autocmd BufRead *.html,*.htm set ft=html
-autocmd BufRead *.php,*.php3 set ft=php
-autocmd BufRead *.pl set ft=perl
-autocmd BufRead *.js set ft=javascript.jquery
-
 " config for *ruby_runner.txt - https://github.com/henrik/vim-ruby-runner
 command! FR set filetype=ruby
 let g:RubyRunner_window_size = 15
 
+" +++++++++++++++++++++++++++++++++
+" Load & save views automatically
+" =================================
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
-" T R A I L I N G  W H I T E S P A C E
-" ------------------------------------
+
+" +++++++++++++++++++++++++++++++++
+" Trailing Whitespace is the Devil!
+" =================================
 " highlight them
 hi link localWhitespaceError Error
 au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display

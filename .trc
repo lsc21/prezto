@@ -1,0 +1,13 @@
+---
+configuration:
+  default_profile:
+  - lsc21
+  - 9liq3utD52H65Rne3mZA
+profiles:
+  lsc21:
+    9liq3utD52H65Rne3mZA:
+      username: lsc21
+      consumer_key: 9liq3utD52H65Rne3mZA
+      consumer_secret: dsVCgyTQBlAIvuDDchAevL7d1Sik1jhYQbe46g9Nc
+      token: 627793-6bAH1ygcbA1hTT6wu5PmBSlAfevIBDbqkJFPE5M4txB
+      secret: kcvjbi4AvRD0bcXaugGDXYjGYH8h526UGrVZ03X0JLfq3

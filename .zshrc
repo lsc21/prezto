@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -23,17 +23,24 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
 plugins=(git vi-mode rake ruby rails rvm)
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+setopt    extendedhistory
 
 source		$ZSH/oh-my-zsh.sh
 unsetopt	correct_all # Disable command auto-correct
-export		PATH=/opt/local/bin:$PATH:$HOME/.bin
+export		PATH=/data/louis/.local/bin:$HOME/.bin:$PATH
 alias			less="less -R"
 alias			ack="ack-grep"
+
+alias mutt='LOCAL_CONFIG=spool /usr/bin/mutt'
+alias gmail='LOCAL_CONFIG=gmail /usr/bin/mutt'
+alias upenn='LOCAL_CONFIG=upenn /usr/bin/mutt'
