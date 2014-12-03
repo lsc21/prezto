@@ -43,4 +43,3 @@ alias			ack="ack-grep"
 
 alias mutt='LOCAL_CONFIG=spool /usr/bin/mutt'
 alias gmail='LOCAL_CONFIG=gmail /usr/bin/mutt'
-alias upenn='LOCAL_CONFIG=upenn /usr/bin/mutt'
