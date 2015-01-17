@@ -29,7 +29,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git vi-mode rake ruby rails rvm)
+plugins=(git vi-mode rake ruby rails rvm screen)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
@@ -37,9 +37,8 @@ setopt    extendedhistory
 
 source		$ZSH/oh-my-zsh.sh
 unsetopt	correct_all # Disable command auto-correct
-export		PATH=/data/louis/.local/bin:$HOME/.bin:$PATH
+export		PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
+export    RAILS_ENV=development
 alias			less="less -R"
-alias			ack="ack-grep"
 
-alias mutt='LOCAL_CONFIG=spool /usr/bin/mutt'
-alias gmail='LOCAL_CONFIG=gmail /usr/bin/mutt'
+eval "$(rbenv init -)"
