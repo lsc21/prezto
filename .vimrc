@@ -48,6 +48,9 @@ set smartindent
 set expandtab
 set linespace=0
 
+" >>> C O L O R <<<
+colorscheme smyck
+
 " >>> A I R L I N E <<<
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
