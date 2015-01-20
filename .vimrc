@@ -71,6 +71,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_mri_exe='/home/louis/.rbenv/shims/ruby'
+
+" >>> R S P E C <<<
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " >>> V I E W S <<<
 autocmd BufWinLeave *.* mkview
