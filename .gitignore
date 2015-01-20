@@ -47,3 +47,4 @@
 .npm
 .msmtp.log
 .node-gyp
+.zcompdump*
