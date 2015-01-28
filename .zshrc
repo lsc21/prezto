@@ -41,3 +41,7 @@ alias			less="less -R"
 alias     ack='ack-grep'
 
 eval "$(rbenv init -)"
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities github prism
+zstyle :omz:plugins:ssh-agent lifetime 12h
