@@ -48,6 +48,9 @@ set smartindent
 set expandtab
 set linespace=0
 
+" map leader to space
+let mapleader = "\<Space>"
+
 " >>> C O L O R <<<
 colorscheme smyck
 
