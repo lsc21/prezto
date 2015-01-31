@@ -49,3 +49,5 @@
 .node-gyp
 .pt
 .zcompdump*
+.netrc
+.heroku
