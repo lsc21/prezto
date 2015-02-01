@@ -45,3 +45,11 @@ eval "$(rbenv init -)"
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities github prism
 zstyle :omz:plugins:ssh-agent lifetime 12h
+
+if (( $+commands[rake] )); then
+  export RAILS_ENV='production'
+  export SECRET_KEY_BASE_DEV=$(rake secret)
+  export SECRET_KEY_BASE_TEST=$(rake secret)
+  export DEVISE_SECRET=$(rake secret)
+  echo "Rails environmental variabls loaded!\n"
+fi
