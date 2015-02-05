@@ -46,12 +46,12 @@ zstyle :omz:plugins:ssh-agent lifetime 12h
 
 if (( $+commands[rbenv] )); then
   eval "$(rbenv init -)"
-fi
-
-if (( $+commands[rake] )); then
-  export RAILS_ENV='production'
-  export SECRET_KEY_BASE_DEV=$(rake secret)
-  export SECRET_KEY_BASE_TEST=$(rake secret)
-  export DEVISE_SECRET=$(rake secret)
-  echo "Rails environmental variabls loaded!\n"
+  ls Rakefile &>/dev/null
+  if [ $? -ne 1 ]; then
+    secret=$(rake secret)
+    export SECRET_KEY_BASE_DEV=secreet
+    export SECRET_KEY_BASE_TEST=secret
+    export DEVISE_SECRET=secret
+    export RAILS_ENV='production'
+  fi
 fi
