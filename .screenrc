@@ -28,3 +28,10 @@ hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= 
 bind f eval "hardstatus ignore"
 # Show hardstatus: ctrl-a F
 bind F eval "hardstatus alwayslastline"
+
+# tabs
+screen -t Pivotal 1
+screen -t Research 2
+screen -t Editor 3
+screen -t Browser 4
+screen -t Miscellany 5
