@@ -43,15 +43,3 @@ alias     ack='ack-grep'
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities github prism
 zstyle :omz:plugins:ssh-agent lifetime 12h
-
-if (( $+commands[rbenv] )); then
-  eval "$(rbenv init -)"
-  ls Rakefile &>/dev/null
-  if [ $? -ne 1 ]; then
-    secret=$(rake secret)
-    export SECRET_KEY_BASE_DEV=secreet
-    export SECRET_KEY_BASE_TEST=secret
-    export DEVISE_SECRET=secret
-    export RAILS_ENV='production'
-  fi
-fi
