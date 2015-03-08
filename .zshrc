@@ -33,11 +33,11 @@ plugins=(git vi-mode rake ruby rails screen ssh-agent)
 
 setopt    extendedhistory
 
-source		$ZSH/oh-my-zsh.sh
-unsetopt	correct_all # Disable command auto-correct
-export		PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
+source    $ZSH/oh-my-zsh.sh
+unsetopt  correct_all # Disable command auto-correct
+export    PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
 export    RAILS_ENV=development
-alias			less="less -R"
+alias     less="less -R"
 alias     ack='ack-grep'
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
