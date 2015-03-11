@@ -35,4 +35,4 @@ screen -t Pivotal 1
 screen -t Research 2
 screen -t Editor 3
 screen -t Browser 4
-screen -t Miscellany 5
+screen -t Console 5
