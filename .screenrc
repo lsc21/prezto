@@ -17,7 +17,7 @@ defbce "on"
 # Enable 256 color term
 term xterm-256color
 
-# Cache 30000 lines for scroll back
+# set scrollback line max
 defscrollback 30000
 
 hardstatus alwayslastline
