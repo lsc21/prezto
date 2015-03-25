@@ -15,6 +15,7 @@ Plugin 'mileszs/ack.vim'          " Vim plugin for Perl's 'ack'
 Plugin 'scrooloose/syntastic'     " Syntax checking hacks for vim
 Plugin 'tpope/vim-surround'       " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'        " lean & mean status/tabline
+Plugin 'wookiehangover/jshint.vim' " jshint
 
 call vundle#end()                 " required for Vundle
 filetype plugin indent on         " required
@@ -75,6 +76,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_mri_exe='/home/louis/.rbenv/shims/ruby'
+let g:syntastic_javascript_checkers = ['jshint']
 
 " >>> R S P E C <<<
 map <Leader>t :call RunCurrentSpecFile()<CR>
