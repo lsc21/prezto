@@ -15,6 +15,7 @@ Plugin 'mileszs/ack.vim'          " Vim plugin for Perl's 'ack'
 Plugin 'scrooloose/syntastic'     " Syntax checking hacks for vim
 Plugin 'tpope/vim-surround'       " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'        " lean & mean status/tabline
+Plugin 'wookiehangover/jshint.vim' " jshint
 
 call vundle#end()                 " required for Vundle
 filetype plugin indent on         " required
@@ -43,13 +44,12 @@ set modifiable                    " modifiable buffers
 set foldlevel=1                   " self-explanatory
 set laststatus=2                  " required for airline
 
-" tabs instead of spaces
 set smartindent
 set expandtab
 set linespace=0
-
-" map leader to space
-let mapleader = "\<Space>"
+set runtimepath^=~/.vim/bundle/bbye " Bbye doesn't yet use Vundle
+let mapleader = "\<Space>"        " map leader to space
+nnoremap <Leader>q :Bdelete<CR>
 
 " >>> C O L O R <<<
 colorscheme smyck
@@ -91,6 +91,13 @@ hi link localWhitespaceError Error
 au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
 au Syntax * syn match localWhitespaceError / \+\ze\t/ display
 autocmd BufWritePre * :%s/\s\+$//e
+
+" R U B Y  R U N N E R <<<
+command! FR set filetype=ruby
+let g:RubyRunner_key = '<Leader>r'
+" let g:RubyRunner_keep_focus_key = '<Leader>R'
+" let g:RubyRunner_open_below = 1
+" let g:RubyRunner_window_size = 10
 
 " tag my comments with my name and date
 iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>

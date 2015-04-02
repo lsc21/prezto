@@ -40,6 +40,8 @@ export    RAILS_ENV=development
 alias     less="less -R"
 alias     ack='ack-grep'
 
+unsetopt nomatch # for rake task args
+
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities github prism
 zstyle :omz:plugins:ssh-agent lifetime 12h
