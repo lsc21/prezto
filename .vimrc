@@ -75,6 +75,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_mri_exe='/home/louis/.rbenv/shims/ruby'
+let g:syntastic_javascript_checkers = ['jshint']
 
 " >>> R S P E C <<<
 map <Leader>t :call RunCurrentSpecFile()<CR>
