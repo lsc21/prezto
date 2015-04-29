@@ -31,7 +31,6 @@ bind F eval "hardstatus alwayslastline"
 
 # tabs
 screen -t Foreman 0
-screen -t Pivotal 1
 screen -t Research 2
 screen -t Editor 3
 screen -t Browser 4
