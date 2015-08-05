@@ -35,7 +35,7 @@ setopt    extendedhistory
 
 source    $ZSH/oh-my-zsh.sh
 unsetopt  correct_all # Disable command auto-correct
-export    PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
+export    PATH=$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
 export    RAILS_ENV=development
 alias     less="less -R"
 alias     ack='ack-grep'
