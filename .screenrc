@@ -31,10 +31,9 @@ bind F eval "hardstatus alwayslastline"
 
 # tabs
 screen -t Foreman 0
-screen -t Research 2
-screen -t Editor 3
-screen -t Browser 4
-screen -t Console 5
+screen -t Editor_1 1
+screen -t Editor_2 2
+screen -t Console 3
 
 # navigating regions with Ctrl-arrows
 bindkey "^[[1;5D" focus left
