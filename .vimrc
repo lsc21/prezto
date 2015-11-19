@@ -55,8 +55,8 @@ nnoremap <Leader>q :Bdelete<CR>
 colorscheme smyck
 
 " >>> A I R L I N E <<<
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
 let g:airline_detect_paste = 1
 let g:airline_detect_iminsert = 0
 let g:airline#extensions#whitespace#enabled = 1
@@ -64,6 +64,7 @@ let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 let g:airline#extensions#whitespace#show_message = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline_powerline_fonts=1
 
 " >>> S Y N T A S T I C <<<
 set statusline+=%#warningmsg#
