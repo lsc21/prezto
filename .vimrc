@@ -16,6 +16,7 @@ Plugin 'scrooloose/syntastic'         " Syntax checking hacks for vim
 Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'            " lean & mean status/tabline
 Plugin 'wookiehangover/jshint.vim'    " jshint
+Plugin 'airblade/vim-gitgutter'       " A Vim plugin which shows a git diff in the gutter
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
@@ -105,3 +106,9 @@ let g:RubyRunner_key = '<Leader>r'
 iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 
 highlight LineNr ctermfg=blue ctermbg=black
+
+command! FR set filetype=ruby
+
+" G I T  G U T T E R <<<
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
