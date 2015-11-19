@@ -33,25 +33,17 @@ plugins=(git vi-mode rake ruby rails screen ssh-agent)
 
 setopt    extendedhistory
 
-source		$ZSH/oh-my-zsh.sh
-unsetopt	correct_all # Disable command auto-correct
-export		PATH=$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
+source    $ZSH/oh-my-zsh.sh
+unsetopt  correct_all # Disable command auto-correct
+export    PATH=$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
 export    RAILS_ENV=development
-alias			less="less -R"
+alias     less="less -R"
 alias     ack='ack-grep'
+
+unsetopt nomatch # for rake task args
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities github prism
 zstyle :omz:plugins:ssh-agent lifetime 12h
 
-if (( $+commands[rbenv] )); then
-  eval "$(rbenv init -)"
-  ls Rakefile &>/dev/null
-  if [ $? -ne 1 ]; then
-    secret=$(rake secret)
-    export SECRET_KEY_BASE_DEV=secreet
-    export SECRET_KEY_BASE_TEST=secret
-    export DEVISE_SECRET=secret
-    export RAILS_ENV='production'
-  fi
-fi
+eval "$(rbenv init -)"
