@@ -21,7 +21,6 @@ Plugin 'airblade/vim-gitgutter'       " A Vim plugin which shows a git diff in t
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
 
-set background=dark                   " dark background by default
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
 set t_Co=256                          " force vim to use 256
 
@@ -52,8 +51,6 @@ set runtimepath^=~/.vim/bundle/bbye   " Bbye doesn't yet use Vundle
 let mapleader = "\<Space>"            " map leader to space
 nnoremap <Leader>q :Bdelete<CR>
 
-" >>> C O L O R <<<
-colorscheme smyck
 
 " >>> A I R L I N E <<<
 "let g:airline_left_sep = ''
