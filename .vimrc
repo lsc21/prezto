@@ -107,13 +107,6 @@ let g:RubyRunner_key = '<Leader>r'
 " let g:RubyRunner_open_below = 1
 " let g:RubyRunner_window_size = 10
 
-" tag my comments with my name and date
-iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
-
-highlight LineNr ctermfg=blue ctermbg=black
-
-command! FR set filetype=ruby
-
 " G I T  G U T T E R <<<
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
