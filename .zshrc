@@ -39,6 +39,7 @@ export    PATH=$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
 export    RAILS_ENV=development
 alias     less="less -R"
 alias     ack='ack-grep'
+alias     travis='RAILS_ENV=test DO_NOT_ADD_FIPS=true bundle exec rake --trace travis:test'
 
 unsetopt nomatch # for rake task args
 
