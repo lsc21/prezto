@@ -54,6 +54,12 @@ nnoremap <Leader>q :Bdelete<CR>
 " tag my comments with my name and date
 iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 
+" Even quicker setting often-used filetypes.
+command! FR set filetype=ruby       " :FR
+command! FJ set filetype=javascript " :FJ
+command! FV set filetype=vim        " :FV
+command! FC set filetype=coffee     " :FC
+
 " >>> A I R L I N E <<<
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
