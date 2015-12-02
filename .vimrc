@@ -51,6 +51,8 @@ set runtimepath^=~/.vim/bundle/bbye   " Bbye doesn't yet use Vundle
 let mapleader = "\<Space>"            " map leader to space
 nnoremap <Leader>q :Bdelete<CR>
 
+" tag my comments with my name and date
+iabbr --l -- louis, <C-r>=strftime("%Y-%m-%d")<CR>
 
 " >>> A I R L I N E <<<
 "let g:airline_left_sep = ''
