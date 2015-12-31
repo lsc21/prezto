@@ -113,3 +113,13 @@ let g:RubyRunner_key = '<Leader>r'
 " >>> G I T  G U T T E R <<<
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+
+" ###############################################
+
+" >>> T I P S  A N D  T R I C K S <<<
+
+" To change two vertically split windows to horizonally split
+" Ctrl-w t Ctrl-w K
+"
+" Horizontally to vertically:
+" Ctrl-w t Ctrl-w H
