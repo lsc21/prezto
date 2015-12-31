@@ -103,13 +103,13 @@ au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
 au Syntax * syn match localWhitespaceError / \+\ze\t/ display
 autocmd BufWritePre * :%s/\s\+$//e
 
-" R U B Y  R U N N E R <<<
+" >>> R U B Y  R U N N E R <<<
 command! FR set filetype=ruby
 let g:RubyRunner_key = '<Leader>r'
 " let g:RubyRunner_keep_focus_key = '<Leader>R'
 " let g:RubyRunner_open_below = 1
 " let g:RubyRunner_window_size = 10
 
-" G I T  G U T T E R <<<
+" >>> G I T  G U T T E R <<<
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
