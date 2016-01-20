@@ -30,4 +30,11 @@
   tt = timetrack
   taghist = log --no-walk --tags --pretty='%h %d %s' --decorate=full
 [push]
-	default = simple
+  default = simple
+[grep]
+  linenumber = true
+  fullName = true
+[web]
+  browser = elinks
+[merge]
+  tool = vimdiff
