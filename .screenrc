@@ -25,12 +25,6 @@ bind f eval "hardstatus ignore"
 # Show hardstatus: ctrl-a F
 bind F eval "hardstatus alwayslastline"
 
-# tabs
-screen -t Foreman 0
-screen -t Editor_1 1
-screen -t Editor_2 2
-screen -t Console 3
-
 # navigating regions with Ctrl-arrows
 bindkey "^[[1;5D" focus left
 bindkey "^[[1;5C" focus right
