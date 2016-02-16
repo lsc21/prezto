@@ -32,6 +32,8 @@ macro index E "<change-folder>+gmail/archive<enter><limit>~B " "search everythin
 macro index,pager A "<save-message>+gmail/archive<enter>" "move message to the archive"
 macro index D "<save-message>+gmail/trash<enter>" "move message to the trash"
 macro index S "<save-message>+gmail/spam<enter>" "mark message as spam"
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
 # Pager View Options ----------------------------------------------------
 set pager_index_lines = 8  # number of index lines to show

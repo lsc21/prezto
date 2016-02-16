@@ -31,6 +31,7 @@ COMPLETION_WAITING_DOTS="true"
 
 plugins=(git vi-mode rake ruby rails screen ssh-agent)
 
+export    EDITOR=vim
 setopt    extendedhistory
 
 source    $ZSH/oh-my-zsh.sh
