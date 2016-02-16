@@ -15,14 +15,18 @@ Plugin 'mileszs/ack.vim'              " Vim plugin for Perl's 'ack'
 Plugin 'scrooloose/syntastic'         " Syntax checking hacks for vim
 Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'            " lean & mean status/tabline
-Plugin 'wookiehangover/jshint.vim'    " jshint
-Plugin 'airblade/vim-gitgutter'       " A Vim plugin which shows a git diff in the gutter
+Plugin 'chriskempson/base16-vim'      " Base16 for Vim
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
 
+" C O L O R  M A N A G E M E N T
+colorscheme base16-default
+set background=dark
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
+let base16colorspace=256              " Access colors present in 256 colorspace
 set t_Co=256                          " force vim to use 256
+highlight LineNr ctermbg=black
 
 set encoding=utf-8                    " utf-8 support
 set termencoding=utf-8                " Terminal utf-8 support
