@@ -51,3 +51,4 @@
 .zcompdump*
 .netrc
 .heroku
+.vim/plugin
