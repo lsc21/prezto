@@ -16,6 +16,7 @@ Plugin 'scrooloose/syntastic'         " Syntax checking hacks for vim
 Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'            " lean & mean status/tabline
 Plugin 'chriskempson/base16-vim'      " Base16 for Vim
+Plugin 'burnettk/vim-angular'         " AngularJS with Vim
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
