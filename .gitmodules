@@ -1,0 +1,8 @@
+[submodule "rbenv/plugins/ruby-build"]
+  path = rbenv/plugins/ruby-build
+  url = https://github.com/sstephenson/ruby-build.git
+  ignore = dirty
+[submodule "rbenv/rbenv"]
+  path = rbenv/rbenv
+  url = https://github.com/sstephenson/rbenv.git
+  ignore = dirty
