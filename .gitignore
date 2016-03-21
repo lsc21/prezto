@@ -43,6 +43,7 @@
 .mail
 .mailcap
 .local
+.rbenv
 .npm
 .msmtp.log
 .node-gyp
@@ -51,3 +52,4 @@
 .netrc
 .heroku
 .vim/plugin
+community-prism/app/assets/js/ng_factories/socket_broadcaster.js
