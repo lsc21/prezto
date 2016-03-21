@@ -42,6 +42,7 @@ alias     less="less -R"
 alias     ack='ack-grep'
 alias     travis='RAILS_ENV=test DO_NOT_ADD_FIPS=true bundle exec rake --trace travis:test'
 alias     gmail='LOCAL_CONFIG=gmail /usr/bin/mutt'
+alias     dstat='dstat -tafn --debug --noheaders'
 
 unsetopt nomatch # for rake task args
 
