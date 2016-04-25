@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'            " lean & mean status/tabline
 Plugin 'chriskempson/base16-vim'      " Base16 for Vim
 Plugin 'burnettk/vim-angular'         " AngularJS with Vim
+Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
