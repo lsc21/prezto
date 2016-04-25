@@ -99,8 +99,8 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " >>> V I E W S <<<
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+autocmd BufWrite * mkview
+autocmd BufRead * silent loadview
 
 " >>> T R A I L I N G  W H I T E S P A C E <<<
 hi link localWhitespaceError Error
