@@ -26,7 +26,6 @@ filetype plugin indent on             " required
 colorscheme base16-default
 set background=dark
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
-let base16colorspace=256              " Access colors present in 256 colorspace
 set t_Co=256                          " force vim to use 256
 highlight LineNr ctermbg=black
 
