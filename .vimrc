@@ -69,6 +69,9 @@ command! FJ set filetype=javascript " :FJ
 command! FV set filetype=vim        " :FV
 command! FC set filetype=coffee     " :FC
 
+" make JSON beautiful
+command JSON %!python -m json.tool
+
 " >>> A I R L I N E <<<
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
