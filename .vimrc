@@ -102,10 +102,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" >>> V I E W S <<<
-autocmd BufWrite * mkview
-autocmd BufRead * silent loadview
-
 " >>> T R A I L I N G  W H I T E S P A C E <<<
 hi link localWhitespaceError Error
 au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
