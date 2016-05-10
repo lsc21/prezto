@@ -1,3 +1,4 @@
+" to reload .vimrc - :so %
 set nocompatible                      " Must come first because it changes other options
 syntax on                             " Turn on syntax highlighting.
 filetype off                          " Turn on file type detection.
