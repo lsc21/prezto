@@ -121,6 +121,10 @@ let g:RubyRunner_key = '<Leader>r'
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
+" >>> P D F <<<
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt
+
+
 " ###############################################
 
 " >>> T I P S  A N D  T R I C K S <<<
