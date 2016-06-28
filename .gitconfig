@@ -7,7 +7,7 @@
 [color]
   diff = auto
   status = auto
-  ranch = auto
+  branch = auto
 [color "diff"]
   meta = yellow
   frag = cyan
