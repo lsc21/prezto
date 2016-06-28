@@ -71,6 +71,7 @@ command! FC set filetype=coffee     " :FC
 
 " make JSON beautiful
 command JSON %!python -m json.tool
+command JQ %!jq '.'
 
 " >>> A I R L I N E <<<
 "let g:airline_left_sep = ''
