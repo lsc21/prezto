@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -44,6 +44,8 @@ alias     travis='RAILS_ENV=test DO_NOT_ADD_FIPS=true bundle exec rake --trace t
 alias     gmail='LOCAL_CONFIG=gmail /usr/bin/mutt'
 alias     dstat='dstat -tafn --debug --noheaders'
 alias     mtl='multitail'
+alias     giti='git'
+alias     gti='git'
 
 unsetopt nomatch # for rake task args
 
