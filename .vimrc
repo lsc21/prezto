@@ -20,6 +20,7 @@ Plugin 'chriskempson/base16-vim'      " Base16 for Vim
 Plugin 'burnettk/vim-angular'         " AngularJS with Vim
 Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
