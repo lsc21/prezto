@@ -21,15 +21,17 @@ Plugin 'burnettk/vim-angular'         " AngularJS with Vim
 Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'       " YouCompleteMe - A code-completion engine for Vim
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
 
 " C O L O R  M A N A G E M E N T
-colorscheme base16-default
-set background=dark
+colorscheme base16-isotope
+" set background=dark
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
 set t_Co=256                          " force vim to use 256
+let base16colorspace=256              " Access colors present in 256 colorspace
 highlight LineNr ctermbg=black
 
 set encoding=utf-8                    " utf-8 support
