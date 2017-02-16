@@ -29,7 +29,7 @@ filetype plugin indent on             " required
 
 " C O L O R  M A N A G E M E N T
 colorscheme base16-isotope
-" set background=dark
+set background=dark
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
 set t_Co=256                          " force vim to use 256
 let base16colorspace=256              " Access colors present in 256 colorspace
