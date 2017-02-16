@@ -22,6 +22,7 @@ Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (a
 Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'       " YouCompleteMe - A code-completion engine for Vim
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
