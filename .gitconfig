@@ -45,7 +45,7 @@
   tool = vimdiff
 	stat = true
 [rerere]
-	enabled = true
+	enabled = false
 [diff]
 	renames = copies
 [commit]
