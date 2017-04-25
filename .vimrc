@@ -78,6 +78,25 @@ command! FC set filetype=coffee     " :FC
 command JSON %!python -m json.tool
 command JQ %!jq '.'
 
+" >>> Silver Searcher <<<
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  " bind K to grep word under cursor
+  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+  " bind \ (backward slash) to grep shortcut
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+endif
+
 " >>> A I R L I N E <<<
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
@@ -107,6 +126,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bundle exec rspec --drb {spec}"
 
 " >>> T R A I L I N G  W H I T E S P A C E <<<
 hi link localWhitespaceError Error
@@ -138,3 +158,6 @@ let g:gitgutter_eager = 0
 "
 " Horizontally to vertically:
 " Ctrl-w t Ctrl-w H
+"
+" Recursive search and replace of string
+" ag SearchString -l0 | xargs -0 sed -i 's/SearchString/Replacement/g'
