@@ -50,3 +50,5 @@
 	renames = copies
 [commit]
 	verbose = true
+[advice]
+	detachedHead = false
