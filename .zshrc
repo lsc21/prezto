@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # P A T H
-export    PATH=.git/safe/../../bin:$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:$PATH
+export    PATH=.git/safe/../../bin:$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/heroku/bin:$PATH
 
 # A L I A S E S
 alias     less="less -R"
