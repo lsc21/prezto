@@ -33,7 +33,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'ssh' \
-#  'completion' \
+  'completion' \
   'ruby' \
   'rails' \
   'git' \
