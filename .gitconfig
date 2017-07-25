@@ -30,7 +30,7 @@
   cpk = cherry-pick
   #hist = log --branches --remotes --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
   histbasic = log  --graph --pretty=format:'%h%x09%an%x09%ad%x09%s'
-  hist = log --branches --remotes  --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  hist = log --branches  --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   histall = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
   tt = timetrack
   taghist = log --no-walk --tags --pretty='%h %d %s' --decorate=full
