@@ -26,6 +26,11 @@ alias     lf2="ssh-multi $FEATURES2"
 alias     add="ssh-add ~/.ssh/prism"
 alias     mina="mina -v"
 
+# Download and Extract Archives with WGET
+alias     wxz='f() { wget $1 -O - | tar -xz};f'
+alias     wxj='f() { wget $1 -O - | tar -xj};f'
+alias     wx='f() { wget $1 -O - | tar -x};f'
+
 export PATH=LOCAL_PATH:$PATH
 
 # R B E N V
