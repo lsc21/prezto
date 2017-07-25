@@ -101,3 +101,6 @@ if [ -f '/home/louis/google-cloud-sdk/path.zsh.inc' ]; then source '/home/louis/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/louis/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/louis/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="/home/ubuntu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
