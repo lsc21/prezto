@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # P A T H
-export    PATH=.git/safe/../../bin:$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/heroku/bin:$PATH
+export    PATH=.git/safe/../../bin:$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH
 
 # A L I A S E S
 alias     less="less -R"
@@ -30,8 +30,6 @@ alias     mina="mina -v"
 alias     wxz='f() { wget $1 -O - | tar -xz};f'
 alias     wxj='f() { wget $1 -O - | tar -xj};f'
 alias     wx='f() { wget $1 -O - | tar -x};f'
-
-export PATH=LOCAL_PATH:$PATH
 
 # R B E N V
 eval "$(rbenv init -)"
