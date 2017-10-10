@@ -62,6 +62,9 @@ set linespace=0
 set runtimepath^=~/.vim/bundle/bbye   " Bbye doesn't yet use Vundle
 let mapleader = "\<Space>"            " map leader to space
 
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
 let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*.wsz,*.xap,*.docx,*.docm,*.dotx,*.dotm,*.potx,*.potm,*.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx'
 
 nnoremap <Leader>q :Bdelete<CR>
@@ -119,7 +122,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_ruby_mri_exe='/home/louis/.rbenv/shims/ruby'
+let g:syntastic_ruby_mri_exe= $HOME ."/.rbenv/shims/ruby"
 let g:syntastic_javascript_checkers = ['jshint']
 
 " >>> R S P E C <<<
