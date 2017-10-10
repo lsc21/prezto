@@ -71,6 +71,8 @@ setopt EXTENDED_GLOB
 # Awesome arrays, (that is, frew${cool}frew has frew surrounding all the variables, not just first and last
 setopt RC_EXPAND_PARAM
 
+bindkey -v
+
 # Who doesn't want home and end to work?
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
@@ -80,8 +82,14 @@ bindkey -M vicmd "/" history-incremental-search-backward
 bindkey -M vicmd "?" history-incremental-search-forward
 
 # Search based on what you typed in already
-bindkey -M vicmd "//" history-beginning-search-backward
-bindkey -M vicmd "??" history-beginning-search-forward
+# bindkey -M vicmd "//" history-beginning-search-backward
+# bindkey -M vicmd "??" history-beginning-search-forward
+#
+bindkey "^R"      history-incremental-search-backward  # ctrl-r
+bindkey "^F"      history-incremental-search-forward   # ctrl-f
+bindkey "^N"      history-search-forward               # ctrl-n
+bindkey "^P"      history-search-backward              # ctrl-p
+bindkey 'jj'      vi-cmd-mode                          # jj maps to vi cmd mode
 
 bindkey "\eOP" run-help
 
