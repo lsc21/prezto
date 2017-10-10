@@ -52,3 +52,5 @@
 	verbose = true
 [advice]
 	detachedHead = false
+[rebase]
+	autosquash = true
