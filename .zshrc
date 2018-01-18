@@ -110,3 +110,7 @@ if [ -f '/home/louis/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/
 
 export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
