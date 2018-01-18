@@ -98,6 +98,9 @@ if executable('ag')
   " bind \ (backward slash) to grep shortcut
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
+  " We can map it to any character, such as \:
+  nnoremap \ :Ag<SPACE>
+
 endif
 
 " >>> A I R L I N E <<<
