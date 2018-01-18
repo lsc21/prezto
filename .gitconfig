@@ -1,9 +1,10 @@
 [user]
   name = Louis Clotman
-	email = louis@clotman.name
+	email = louis.clotman@aixplatform.com
+	signingkey = A2BC8C04C657FAD585C791CBD3B7BBFFF4070BC6
 [core]
 	editor = vim
-	excludesfile = ~/.config/git/ignore
+	excludesfile = /Users/louis/.gitignore_global
 	whitespace = trailing-space,space-before-tab
 [color]
   diff = auto
@@ -50,7 +51,26 @@
 	renames = copies
 [commit]
 	verbose = true
+	gpgsign = true
 [advice]
 	detachedHead = false
 [rebase]
 	autosquash = true
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
+[fetch]
+	prune = true
+[gitflow "feature.finish"]
+	keep = true
+	push = true
+[gitflow "feature.delete"]
+	remote = true
+[receive]
+	denyNonFastForwards = true
+	denyDeletes = true
+[hub]
+	protocol = https
+[gpg]
+	program = gpg2
+[credential]
+  helper = store

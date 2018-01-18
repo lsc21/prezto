@@ -4,36 +4,37 @@ syntax on                             " Turn on syntax highlighting.
 filetype off                          " Turn on file type detection.
 
 set rtp+=~/.vim/bundle/Vundle.vim     " use Vundle
-call vundle#begin()
+set rtp+=/usr/local/opt/fzf           " use fuzzy finder
 
-Plugin 'gmarik/Vundle.vim'            " let Vundle manage Vundle, required
-Plugin 'tpope/vim-fugitive'           " control git from within vim
-Plugin 'tpope/vim-rails'              " Ruby on Rails power tools
-Plugin 'vim-ruby/vim-ruby'            " Vim/Ruby Configuration Files
-Plugin 'thoughtbot/vim-rspec'         " Run Rspec specs from Vim
-Plugin 'mileszs/ack.vim'              " Vim plugin for Perl's 'ack'
-Plugin 'scrooloose/syntastic'         " Syntax checking hacks for vim
-Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
-Plugin 'bling/vim-airline'            " lean & mean status/tabline
-Plugin 'chriskempson/base16-vim'      " Base16 for Vim
-Plugin 'burnettk/vim-angular'         " AngularJS with Vim
-Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
-Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'       " YouCompleteMe - A code-completion engine for Vim
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
+" V I M  P L U G
+call plug#begin('~/.vim/plugged')
 
-call vundle#end()                     " required for Vundle
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'chriskempson/base16-vim'
+Plug 'burnettk/vim-angular'
+Plug 'othree/html5.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'qpkorr/vim-bufkill'
+Plug 'junegunn/fzf.vim'
+Plug 'elzr/vim-json'
+Plug 'hashivim/vim-terraform'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+call plug#end()
+
 filetype plugin indent on             " required
 
 " C O L O R  M A N A G E M E N T
-colorscheme base16-isotope
+colorscheme base16-default-dark
 set background=dark
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
 set t_Co=256                          " force vim to use 256
 let base16colorspace=256              " Access colors present in 256 colorspace
-highlight LineNr ctermbg=black
 
 set encoding=utf-8                    " utf-8 support
 set termencoding=utf-8                " Terminal utf-8 support
@@ -60,6 +61,7 @@ set expandtab
 set linespace=0
 set runtimepath^=~/.vim/bundle/bbye   " Bbye doesn't yet use Vundle
 let mapleader = "\<Space>"            " map leader to space
+set scrolloff=3                       " this is handy
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
@@ -98,11 +100,12 @@ if executable('ag')
   " bind \ (backward slash) to grep shortcut
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
+  " We can map it to any character, such as \:
+  nnoremap \ :Ag<SPACE>
+
 endif
 
 " >>> A I R L I N E <<<
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
 let g:airline_detect_paste = 1
 let g:airline_detect_iminsert = 0
 let g:airline#extensions#whitespace#enabled = 1
@@ -111,6 +114,11 @@ let g:airline#extensions#whitespace#show_message = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline_powerline_fonts=1
+let g:airline_detect_crypt=1
+let g:airline_symbols_ascii = 1
+let g:airline#extensions#branch#vcs_checks = []
+let g:airline_minimalist_showmod = 1
+let g:airline_theme='minimalist'
 
 " >>> S Y N T A S T I C <<<
 set statusline+=%#warningmsg#
@@ -122,24 +130,25 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_mri_exe= $HOME ."/.rbenv/shims/ruby"
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " >>> R S P E C <<<
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "!bundle exec rspec --drb {spec}"
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+" let g:rspec_command = "!bundle exec rspec --drb {spec}"
 
 " >>> T R A I L I N G  W H I T E S P A C E <<<
-hi link localWhitespaceError Error
-au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
-au Syntax * syn match localWhitespaceError / \+\ze\t/ display
-autocmd BufWritePre * :%s/\s\+$//e
+" hi link localWhitespaceError Error
+" au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
+" au Syntax * syn match localWhitespaceError / \+\ze\t/ display
+" autocmd BufWritePre * :%s/\s\+$//e
 
 " >>> R U B Y  R U N N E R <<<
-command! FR set filetype=ruby
-let g:RubyRunner_key = '<Leader>r'
+" command! FR set filetype=ruby
+" let g:RubyRunner_key = '<Leader>r'
 " let g:RubyRunner_keep_focus_key = '<Leader>R'
 " let g:RubyRunner_open_below = 1
 " let g:RubyRunner_window_size = 10
@@ -147,10 +156,28 @@ let g:RubyRunner_key = '<Leader>r'
 " >>> G I T  G U T T E R <<<
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+let g:gitgutter_override_sign_column_highlight = 0
 
 " >>> P D F <<<
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt
 
+" >>> C O L O R  T W E A K S <<<
+" hi Normal guibg=Black guifg=White
+hi StatusLine ctermbg=145 ctermfg=59
+hi LineNr ctermbg=black
+hi Search cterm=NONE ctermfg=black ctermbg=red
+hi Folded ctermbg=red ctermfg=black
+
+hi clear SignColumn
+hi SignColumn ctermfg=red
+hi GitGutterAdd ctermfg=green ctermbg=black
+hi GitGutterChange ctermfg=magenta ctermbg=black
+hi GitGutterDelete ctermfg=red ctermbg=black
+hi GitGutterChangeDelete ctermfg=yellow ctermbg=black
+hi CursorLine ctermfg=black ctermbg=red
+
+" >>> T E R R A F O R M <<<
+let g:terraform_fold_sections=0
 
 " ###############################################
 
@@ -164,3 +191,13 @@ let g:gitgutter_eager = 0
 "
 " Recursive search and replace of string
 " ag SearchString -l0 | xargs -0 sed -i 's/SearchString/Replacement/g'
+"
+" Undoing and Redoing
+" u = undo
+" CTRL-r = redo
+" g- = move you to the previous change, regardless where it is situated in your undo tree
+" g+ = move you to the following change ...
+" 2g- = back 2 changes
+" 2g+ = forward 2 changes
+" :earlier 2 = 2g-
+" :later 2 = 2g+
