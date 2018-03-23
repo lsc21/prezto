@@ -60,6 +60,7 @@ set expandtab
 set linespace=0
 set runtimepath^=~/.vim/bundle/bbye   " Bbye doesn't yet use Vundle
 let mapleader = "\<Space>"            " map leader to space
+set scrolloff=3                       " this is handy
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
