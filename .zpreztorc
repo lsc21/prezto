@@ -116,7 +116,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'github' 'prism'
+zstyle ':prezto:module:ssh:load' identities 'github'
 
 #
 # Syntax Highlighting
