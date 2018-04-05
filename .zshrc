@@ -3,8 +3,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# P A T H
+# E N V  V A R S
 export    PATH=.git/safe/../../bin:$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH
+export    CLOUDSDK_PYTHON=/usr/bin/python
 
 # A L I A S E S
 alias     less="less -R"
