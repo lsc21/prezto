@@ -20,7 +20,6 @@ Plugin 'burnettk/vim-angular'         " AngularJS with Vim
 Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'       " YouCompleteMe - A code-completion engine for Vim
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
 
