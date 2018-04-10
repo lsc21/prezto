@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # E N V  V A R S
-export    PATH=.git/safe/../../bin:$HOME/beam/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH
+export    PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH
 export    CLOUDSDK_PYTHON=/usr/bin/python
 
 # A L I A S E S
