@@ -10,11 +10,11 @@ Plugin 'gmarik/Vundle.vim'            " let Vundle manage Vundle, required
 Plugin 'tpope/vim-fugitive'           " control git from within vim
 Plugin 'tpope/vim-rails'              " Ruby on Rails power tools
 Plugin "tpope/vim-vinegar"            " Combine with netrw to create a delicious salad dressing
+Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
 Plugin 'vim-ruby/vim-ruby'            " Vim/Ruby Configuration Files
 Plugin 'thoughtbot/vim-rspec'         " Run Rspec specs from Vim
 Plugin 'mileszs/ack.vim'              " Vim plugin for Perl's 'ack'
 Plugin 'scrooloose/syntastic'         " Syntax checking hacks for vim
-Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
 Plugin 'bling/vim-airline'            " lean & mean status/tabline
 Plugin 'chriskempson/base16-vim'      " Base16 for Vim
 Plugin 'burnettk/vim-angular'         " AngularJS with Vim
