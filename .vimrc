@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'            " let Vundle manage Vundle, required
 Plugin 'tpope/vim-fugitive'           " control git from within vim
 Plugin 'tpope/vim-rails'              " Ruby on Rails power tools
+Plugin "tpope/vim-vinegar"            " Combine with netrw to create a delicious salad dressing
 Plugin 'vim-ruby/vim-ruby'            " Vim/Ruby Configuration Files
 Plugin 'thoughtbot/vim-rspec'         " Run Rspec specs from Vim
 Plugin 'mileszs/ack.vim'              " Vim plugin for Perl's 'ack'
