@@ -34,9 +34,6 @@ eval "$(rbenv init -)"
 # S S H  A G E N T
 eval `ssh-agent -s`
 
-# O P T I O N S
-export EDITOR=vim
-
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
 
