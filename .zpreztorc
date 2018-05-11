@@ -40,6 +40,7 @@ zstyle ':prezto:load' pmodule \
   'ruby' \
   'rails' \
   'git' \
+  'contrib-kubernetes' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
