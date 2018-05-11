@@ -4,8 +4,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # E N V  V A R S
-export    PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH
-export    CLOUDSDK_PYTHON=/usr/bin/python
+#set -a    # export attribute shall be set for each variable to which an assignment is performed;
+PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH:$HOME/google-cloud-sdk/bin
 
 # A L I A S E S
 alias     less="less -R"
