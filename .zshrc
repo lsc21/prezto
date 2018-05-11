@@ -20,10 +20,6 @@ alias     gti='git'
 alias     lp='ssh-multi deployer@{pa,md,nyc,co,sc}.prism.locall'
 alias     lb='ssh-multi deployer@{pa,md,nyc,co,sc}.betaprism.local'
 alias     lt='ssh-multi deployer@{pa,md,nyc,co,sc}-training.betaprism.local'
-FEATURES1=(f1 f2 f3 f4 f5 f6 f7 f8 f9 f10)
-FEATURES2=(f11 f12 f13 f14 f15 f16 f17 f18 f19 f20)
-alias     lf1="ssh-multi $FEATURES1"
-alias     lf2="ssh-multi $FEATURES2"
 alias     add="ssh-add ~/.ssh/prism"
 alias     mina="mina -v"
 
