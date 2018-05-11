@@ -12,6 +12,9 @@
 # Set case-sensitivity for completion, history lookup, etc.
 zstyle ':prezto:*:*' case-sensitive 'yes'
 
+zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
+  '0.0.0.0' '127.0.0.1'
+
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
