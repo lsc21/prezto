@@ -93,18 +93,14 @@ bindkey -M vicmd "q" push-line
 # it's like, space AND completion.  Gnarlbot.
 bindkey -M viins ' ' magic-space
 
-# Google Cloud
-export CLOUDSDK_PYTHON=/usr/bin/pytho
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/louis/google-cloud-sdk/path.zsh.inc' ]; then source '/home/louis/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/louis/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/louis/google-cloud-sdk/completion.zsh.inc'; fi
-
 export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 . $HOME/.asdf/asdf.sh
-
 . $HOME/.asdf/completions/asdf.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/louis/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/louis/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/louis/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/louis/google-cloud-sdk/completion.zsh.inc'; fi
