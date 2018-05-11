@@ -1,1 +1,1 @@
-/home/louis/.zprezto/runcoms/zshenv
+/Users/louis/.zprezto/runcoms/zshenv
