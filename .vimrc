@@ -23,6 +23,7 @@ Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
+Plugin 'junegunn/fzf.vim'             " Fuzzy finder
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
