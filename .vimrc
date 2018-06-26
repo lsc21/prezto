@@ -24,6 +24,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
 Plugin 'junegunn/fzf.vim'             " Fuzzy finder
+Plugin 'elzr/vim-json'                " A better JSON for Vim
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
