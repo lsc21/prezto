@@ -28,6 +28,12 @@ alias     wxz='f() { wget $1 -O - | tar -xz};f'
 alias     wxj='f() { wget $1 -O - | tar -xj};f'
 alias     wx='f() { wget $1 -O - | tar -x};f'
 
+# Infrastructure
+alias     t='terraform'
+alias     gc="gcloud"
+alias     kbDevicted="kbg po -a | grep Evicted | awk '{print $1}' | xargs kubectl delete pod"
+alias     kns"kubectl config set-context $(kubectl config current-context) --namespace=$1"
+
 # R B E N V
 eval "$(rbenv init -)"
 
