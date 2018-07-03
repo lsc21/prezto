@@ -5,7 +5,7 @@ fi
 
 # E N V  V A R S
 #set -a    # export attribute shall be set for each variable to which an assignment is performed;
-PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH:$HOME/google-cloud-sdk/bin
+PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$PATH
 
 # A L I A S E S
 alias     less="less -R"
