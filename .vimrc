@@ -4,6 +4,8 @@ syntax on                             " Turn on syntax highlighting.
 filetype off                          " Turn on file type detection.
 
 set rtp+=~/.vim/bundle/Vundle.vim     " use Vundle
+set rtp+=/usr/local/opt/fzf           " use fuzzy finder
+
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'            " let Vundle manage Vundle, required
@@ -23,7 +25,7 @@ Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
-Plugin 'junegunn/fzf.vim'             " Fuzzy finder
+Plugin 'junegunn/fzf.vim'             " fzf ❤️ vim
 Plugin 'elzr/vim-json'                " A better JSON for Vim
 
 call vundle#end()                     " required for Vundle

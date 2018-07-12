@@ -54,3 +54,5 @@
 	detachedHead = false
 [rebase]
 	autosquash = true
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
