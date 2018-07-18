@@ -33,6 +33,7 @@ alias     t='terraform'
 alias     gc="gcloud"
 alias     kbDevicted="kbg po -a | grep Evicted | awk '{print $1}' | xargs kubectl delete pod"
 alias     gb="git branch | fzf-tmux -d 15"
+alias     gdns="gcloud dns record-sets list -z feature"
 
 # R B E N V
 eval "$(rbenv init -)"
