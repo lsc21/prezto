@@ -32,7 +32,6 @@ alias     wx='f() { wget $1 -O - | tar -x};f'
 alias     t='terraform'
 alias     gc="gcloud"
 alias     kbDevicted="kbg po -a | grep Evicted | awk '{print $1}' | xargs kubectl delete pod"
-alias     kns"kubectl config set-context $(kubectl config current-context) --namespace=$1"
 alias     gb="git branch | fzf-tmux -d 15"
 
 # R B E N V
