@@ -3,7 +3,7 @@
 	email = louis@clotman.name
 [core]
 	editor = vim
-	excludesfile = ~/.config/git/ignore
+	excludesfile = /Users/louis/.gitignore_global
 	whitespace = trailing-space,space-before-tab
 [color]
   diff = auto
@@ -56,3 +56,10 @@
 	autosquash = true
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
+[fetch]
+	prune = true
+[gitflow "feature.finish"]
+	keep = true
+	push = true
+[gitflow "feature.delete"]
+	remote = true
