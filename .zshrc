@@ -3,9 +3,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Enable Tab completion for zshrc
+source "$HOME/.zsh/git-flow-completion.zsh"
+
+export EDITOR=vim
 # E N V  V A R S
 #set -a    # export attribute shall be set for each variable to which an assignment is performed;
-PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$HOME/google-cloud-sdk/bin:$PATH
+PATH=.git/safe/../../bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/Code/prism/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/lib64/heroku/bin:$HOME/google-cloud-sdk/bin:/usr/local/opt/bin:$PATH
 
 # A L I A S E S
 alias     less="less -R"
@@ -106,15 +110,16 @@ export NVM_DIR="/home/ubuntu/.nvm"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# load custom executable functions
+for function in ~/.zsh/functions/*; do
+  source $function
+done
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/louis/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/louis/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/louis/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/louis/google-cloud-sdk/completion.zsh.inc'; fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# fh - repeat history
-fh() {
-  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
-}
