@@ -86,3 +86,6 @@ node_modules
 .zprezto
 .npmrc
 .kube
+.selected_editor
+.config
+.standard-v14-cache
