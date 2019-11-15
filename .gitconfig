@@ -1,6 +1,7 @@
 [user]
   name = Louis Clotman
-	email = louis@clotman.name
+	email = louis.clotman@aixplatform.com
+	signingkey = A2BC8C04C657FAD585C791CBD3B7BBFFF4070BC6
 [core]
 	editor = vim
 	excludesfile = /Users/louis/.gitignore_global
@@ -50,6 +51,7 @@
 	renames = copies
 [commit]
 	verbose = true
+	gpgsign = true
 [advice]
 	detachedHead = false
 [rebase]
@@ -63,3 +65,10 @@
 	push = true
 [gitflow "feature.delete"]
 	remote = true
+[credential]
+	helper = osxkeychain
+[receive]
+	denyNonFastForwards = true
+	denyDeletes = true
+[hub]
+	protocol = https
