@@ -25,6 +25,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
 Plugin 'junegunn/fzf.vim'             " fzf ❤️ vim
 Plugin 'elzr/vim-json'                " A better JSON for Vim
+Plugin 'hashivim/vim-terraform'       " Terraform magic
 
 call vundle#end()                     " required for Vundle
 filetype plugin indent on             " required
@@ -130,7 +131,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_mri_exe= $HOME ."/.rbenv/shims/ruby"
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " >>> R S P E C <<<
 " map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -140,10 +142,10 @@ let g:syntastic_javascript_checkers = ['jshint']
 " let g:rspec_command = "!bundle exec rspec --drb {spec}"
 
 " >>> T R A I L I N G  W H I T E S P A C E <<<
-hi link localWhitespaceError Error
-au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
-au Syntax * syn match localWhitespaceError / \+\ze\t/ display
-autocmd BufWritePre * :%s/\s\+$//e
+" hi link localWhitespaceError Error
+" au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
+" au Syntax * syn match localWhitespaceError / \+\ze\t/ display
+" autocmd BufWritePre * :%s/\s\+$//e
 
 " >>> R U B Y  R U N N E R <<<
 " command! FR set filetype=ruby
@@ -174,6 +176,9 @@ hi GitGutterChange ctermfg=magenta ctermbg=black
 hi GitGutterDelete ctermfg=red ctermbg=black
 hi GitGutterChangeDelete ctermfg=yellow ctermbg=black
 hi CursorLine ctermfg=black ctermbg=red
+
+" >>> T E R R A F O R M <<<
+let g:terraform_fold_sections=0
 
 " ###############################################
 

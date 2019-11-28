@@ -5,7 +5,7 @@ fi
 [ -f /Users/lclotman/.travis/travis.sh ] && source /Users/lclotman/.travis/travis.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=$HOME/.rbenv/versions/2.6.5/bin:/usr/local/bin:/usr/local/opt:$PATH
+export PATH=/usr/local/bin:/usr/local/opt:$HOME/.google-cloud-sdk/bin/gcloud:$PATH
 
 source "$HOME/.zsh/aliases.zsh"     # Load Aliases
 source "$HOME/.zsh/options.zsh"     # Load options
@@ -26,11 +26,11 @@ eval "$(direnv hook zsh)"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/louis/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/louis/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/louis/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/louis/google-cloud-sdk/completion.zsh.inc'; fi
-
 # attach to tmux session if it exists; if not, create it
 tmux new-session -A -s main
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lclotman/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lclotman/.google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lclotman/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lclotman/.google-cloud-sdk/completion.zsh.inc'; fi
