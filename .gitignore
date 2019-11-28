@@ -89,3 +89,5 @@ node_modules
 .selected_editor
 .config
 .standard-v14-cache
+.google-cloud-sdk
+.circleci
