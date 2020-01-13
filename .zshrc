@@ -34,3 +34,12 @@ if [ -f '/Users/lclotman/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lclot
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lclotman/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lclotman/.google-cloud-sdk/completion.zsh.inc'; fi
+
+# ===============
+# AIX Specific  TODO break this out into ~/.zsh/aix
+# ===============
+# --- Node Version Manager
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export GOPATH=$HOME/Code/go
