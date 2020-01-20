@@ -91,3 +91,4 @@ node_modules
 .standard-v14-cache
 .google-cloud-sdk
 .circleci
+.sentryclirc
