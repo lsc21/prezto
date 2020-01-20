@@ -26,6 +26,8 @@
 .vim/.VimballRecord
 .vim/.netrwhist
 .vim/doc/
+.vim/autoload
+.vim/plugged
 .links/
 .macports/
 .vagrant.d/
@@ -92,3 +94,4 @@ node_modules
 .google-cloud-sdk
 .circleci
 .sentryclirc
+.fzf
