@@ -10,21 +10,18 @@ export PATH=/usr/local/bin:/usr/local/opt:$HOME/.google-cloud-sdk/bin/gcloud:$PA
 source "$HOME/.zsh/aliases.zsh"     # Load Aliases
 source "$HOME/.zsh/options.zsh"     # Load options
 source "$HOME/.zsh/bindkeys.zsh"    # Load bindkeys
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "$HOME/.fzf/shell/key-bindings.zsh"
 
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
 done
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 eval `ssh-agent -s`
 eval "$(direnv hook zsh)"
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 # attach to tmux session if it exists; if not, create it
 tmux new-session -A -s main
