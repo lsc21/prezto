@@ -72,3 +72,5 @@
 	denyDeletes = true
 [hub]
 	protocol = https
+[gpg]
+	program = gpg2
