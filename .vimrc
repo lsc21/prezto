@@ -6,28 +6,27 @@ filetype off                          " Turn on file type detection.
 set rtp+=~/.vim/bundle/Vundle.vim     " use Vundle
 set rtp+=/usr/local/opt/fzf           " use fuzzy finder
 
-call vundle#begin()
+" V I M  P L U G
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'            " let Vundle manage Vundle, required
-Plugin 'tpope/vim-fugitive'           " control git from within vim
-Plugin 'tpope/vim-rails'              " Ruby on Rails power tools
-Plugin 'tpope/vim-vinegar'            " Combine with netrw to create a delicious salad dressing
-Plugin 'tpope/vim-surround'           " quoting/parenthesizing made simple
-Plugin 'mileszs/ack.vim'              " Vim plugin for Perl's 'ack'
-Plugin 'scrooloose/syntastic'         " Syntax checking hacks for vim
-Plugin 'bling/vim-airline'            " lean & mean status/tabline
-Plugin 'chriskempson/base16-vim'      " Base16 for Vim
-Plugin 'burnettk/vim-angular'         " AngularJS with Vim
-Plugin 'ConradIrwin/vim-bracketed-paste' "Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
-Plugin 'othree/html5.vim'             " HTML5 omnicomplete and syntax
-Plugin 'airblade/vim-gitgutter'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'qpkorr/vim-bufkill'           " Close Vim buffers without closing windows
-Plugin 'junegunn/fzf.vim'             " fzf ❤️ vim
-Plugin 'elzr/vim-json'                " A better JSON for Vim
-Plugin 'hashivim/vim-terraform'       " Terraform magic
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'chriskempson/base16-vim'
+Plug 'burnettk/vim-angular'
+Plug 'othree/html5.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'qpkorr/vim-bufkill'
+Plug 'junegunn/fzf.vim'
+Plug 'elzr/vim-json'
+Plug 'hashivim/vim-terraform'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-call vundle#end()                     " required for Vundle
+call plug#end()
+
 filetype plugin indent on             " required
 
 " C O L O R  M A N A G E M E N T
