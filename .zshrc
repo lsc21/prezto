@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 [ -f /Users/lclotman/.travis/travis.sh ] && source /Users/lclotman/.travis/travis.sh
 
-export PATH=/usr/local/bin:/usr/local/opt:$HOME/.google-cloud-sdk/bin/gcloud:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 source "$HOME/.zsh/aliases.zsh"     # Load Aliases
 source "$HOME/.zsh/options.zsh"     # Load options
@@ -17,7 +17,9 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
-# eval "$(rbenv init -)"
+export SAVEHIST=500000
+export HISTFILE="$HOME/.zhistory"
+
 eval `ssh-agent -s`
 eval "$(direnv hook zsh)"
 
@@ -26,10 +28,7 @@ eval "$(direnv hook zsh)"
 # attach to tmux session if it exists; if not, create it
 tmux new-session -A -s main
 
-# The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/lclotman/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lclotman/.google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
 if [ -f '/Users/lclotman/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lclotman/.google-cloud-sdk/completion.zsh.inc'; fi
 
 # ===============
@@ -40,3 +39,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export GOPATH=$HOME/Code/go
+
+if [ -f '/home/vagrant/google-cloud-sdk/path.zsh.inc' ]; then . '/home/vagrant/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/home/vagrant/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/vagrant/google-cloud-sdk/completion.zsh.inc'; fi
