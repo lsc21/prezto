@@ -3,14 +3,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 [ -f /Users/lclotman/.travis/travis.sh ] && source /Users/lclotman/.travis/travis.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=/usr/local/bin:/usr/local/opt:$HOME/.google-cloud-sdk/bin/gcloud:$PATH
 
 source "$HOME/.zsh/aliases.zsh"     # Load Aliases
 source "$HOME/.zsh/options.zsh"     # Load options
 source "$HOME/.zsh/bindkeys.zsh"    # Load bindkeys
-source "$HOME/.fzf/shell/key-bindings.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
