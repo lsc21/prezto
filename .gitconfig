@@ -65,8 +65,6 @@
 	push = true
 [gitflow "feature.delete"]
 	remote = true
-[credential]
-	helper = osxkeychain
 [receive]
 	denyNonFastForwards = true
 	denyDeletes = true
@@ -74,3 +72,5 @@
 	protocol = https
 [gpg]
 	program = gpg2
+[credential]
+  helper = store
