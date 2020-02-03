@@ -101,5 +101,4 @@ secrets
 .nvm/
 .pki
 .sudo_as_admin_successful
-
-                        ]
+.zsh/aix-secrets.zsh

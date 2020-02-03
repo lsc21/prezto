@@ -5,9 +5,11 @@ export PATH=/usr/local/bin:$HOME/bin:$HOME/.rbenv/bin:$HOME/.rbenv/versions/2.7.
 [ -f "$HOME/.zsh/aliases.zsh" ]   && . "$HOME/.zsh/aliases.zsh"
 [ -f "$HOME/.zsh/options.zsh" ]   && . "$HOME/.zsh/options.zsh"
 [ -f "$HOME/.zsh/bindkeys.zsh" ]  && . "$HOME/.zsh/bindkeys.zsh"
-[ -f "$HOME/.zsh/aix.zsh" ]       && . "$HOME/.zsh/aix.zsh"
 [ -f "$HOME/.fzf.zsh" ]           && . "$HOME/.fzf.zsh"
 [ -s "$NVM_DIR/nvm.sh" ]          && . "$NVM_DIR/nvm.sh"
+
+[ -f "$HOME/.zsh/aix.zsh" ]       && . "$HOME/.zsh/aix.zsh"
+[ -f "$HOME/.zsh/aix-secrets.zsh" ]       && . "$HOME/.zsh/aix-secrets.zsh"
 
 [ -f "$HOME/.google-cloud-sdk/path.zsh.inc" ]       && source "$HOME/.google-cloud-sdk/path.zsh.inc"
 [ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ] && source  "$HOME/.google-cloud-sdk/completion.zsh.inc"
