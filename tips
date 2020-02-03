@@ -1,8 +1,9 @@
 -------------------
 # TMUX
 -------------------
-CTL-A w - list all windows
-CTL-A = - list all paste buffers (for multiline pastes)
+CTL-a w - list all windows
+CTL-a = - list all paste buffers (for multiline pastes)
+CTL-a b - list (and toogle between) all available sessions
 
 -------------------
 # FZF
@@ -41,3 +42,8 @@ History! - Search history
 Commits - Brows commits
 BCommits - Brows commits for the current buffer
 Commands - List all possible commands
+
+-------------------
+# JSON
+-------------------
+- cat JSON_FILE_OR_STREAM | fx - process json interactively
