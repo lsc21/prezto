@@ -11,8 +11,8 @@ export PATH=/usr/local/bin:$HOME/bin:$HOME/.rbenv/bin:$HOME/.rbenv/versions/2.7.
 [ -f "$HOME/.zsh/aix.zsh" ]                         && . "$HOME/.zsh/aix.zsh"
 [ -f "$HOME/.zsh/aix-secrets.zsh" ]                 && . "$HOME/.zsh/aix-secrets.zsh"
 
-[ -f "$HOME/.google-cloud-sdk/path.zsh.inc" ]       && source "$HOME/.google-cloud-sdk/path.zsh.inc"
-[ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ] && source  "$HOME/.google-cloud-sdk/completion.zsh.inc"
+[ -f "$HOME/.google-cloud-sdk/path.zsh.inc" ]       && . "$HOME/.google-cloud-sdk/path.zsh.inc"
+[ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/.google-cloud-sdk/completion.zsh.inc"
 
 for function in ~/.zsh/functions/*; do
   source $function
