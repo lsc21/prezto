@@ -17,7 +17,7 @@ alias     gb="git branch | fzf-tmux -d 15"
 alias     gdns="gcloud dns record-sets list -z feature"
 
 # Debugging
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome="/usr/bin/chromium-browser"
 
 # AIX DevOps
 #
