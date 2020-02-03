@@ -1,0 +1,1 @@
+export HEALTH_API_PASSWORD=Bd3UiG5btjzu7ellok6WQJa7
