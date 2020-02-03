@@ -97,3 +97,4 @@ node_modules
 .fzf
 bin
 .git-credentials
+secrets
