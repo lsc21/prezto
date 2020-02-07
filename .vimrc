@@ -19,6 +19,7 @@ Plug 'burnettk/vim-angular'
 Plug 'othree/html5.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'qpkorr/vim-bufkill'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'elzr/vim-json'
 Plug 'hashivim/vim-terraform'
