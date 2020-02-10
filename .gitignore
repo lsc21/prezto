@@ -97,7 +97,7 @@ node_modules
 .fzf
 bin
 .git-credentials
-secrets
+.password-store/
 .nvm/
 .pki
 .sudo_as_admin_successful
