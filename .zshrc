@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$HOME/bin:$HOME/.rbenv/bin:$HOME/.rbenv/versions/2.7.0//bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$HOME/.rbenv/bin:$GOPATH/bin:$PATH
 
 [ -f "$HOME/.zprezto/init.zsh" ]                    && . "$HOME/.zprezto/init.zsh"
 [ -f "$HOME/.travis/travis.sh" ]                    && . "$HOME/.travis/travis.sh"
