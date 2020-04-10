@@ -12,27 +12,6 @@ CTL-a b - list (and toogle between) all available sessions
 - CTL-R - fuzzy filter command history search
 
 -------------------
-# TRAVIS
--------------------
-- travis history - show the project's build history
-- travis show    - show details of a specific build
-- travis status  - did the most recent build pass or fail
-- travis whatsup - list recent builds
-- travis cancel  - cancel a build
-- travis restart - restart a build
-- travis sync     - trigger a sync with Github
-- travis monitor - live monitor what's going on
-------
-- travis requests - list recent travis requests
-- travis lint    - lint the travis.yaml
-- travis report  - print out system and config info for debugging travis commands
-
--------------------
-# FZF-VIM
--------------------
-- :diffoff! - disable crazy colors when looking at vimdiffs
-
--------------------
 # FZF-VIM
 -------------------
 Files - filter all dirs,files under current location
@@ -47,6 +26,7 @@ History! - Search history
 Commits - Brows commits
 BCommits - Brows commits for the current buffer
 Commands - List all possible commands
+:diffoff! - disable crazy colors when looking at vimdiffs
 
 -------------------
 # JSON

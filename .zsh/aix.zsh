@@ -1,3 +1,15 @@
+## Microk8s
+# alias kaixmicro="kubectl --kubeconfig=$HOME/Code/microk8s/kubeconfig"
+# alias haixmicro="KUBECONFIG=$HOME/Code/microk8s/kubeconfig HELM_HOME=$HOME/helm helm"
+
+## EKS
+alias kaixkops="kubectl --kubeconfig=$HOME/Code/alb.aix.clotman.name/kubeconfig"
+alias haixkops="KUBECONFIG=$HOME/Code/alb.aix.clotman.name/kubeconfig HELM_HOME=$HOME/helm helm"
+
+## Event Service
+alias kaixevents="kubectl --kubeconfig=$HOME/Code/aix-event-service-uat/kubeconfig"
+alias haixevents="KUBECONFIG=$HOME/Code/aix-event-service-uat/kubeconfig HELM_HOME=$HOME/helm helm"
+
 ## Staging
 alias kaixstaging="kubectl --kubeconfig=$HOME/Code/infrastructure-staging/kubeconfig"
 alias haixstaging="KUBECONFIG=$HOME/Code/infrastructure-staging/kubeconfig HELM_HOME=$HOME/helm helm"

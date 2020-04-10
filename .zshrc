@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$HOME/bin:$HOME/.rbenv/bin:$GOPATH/bin:$PATH
+export PATH=/usr/local/bin:/snap/bin:$HOME/bin:$HOME/.rbenv/bin:$GOPATH/bin:$HOME/.krew/bin:$PATH
 
 [ -f "$HOME/.zprezto/init.zsh" ]                    && . "$HOME/.zprezto/init.zsh"
 [ -f "$HOME/.travis/travis.sh" ]                    && . "$HOME/.travis/travis.sh"
@@ -25,3 +25,4 @@ export GOPATH=$HOME/Code/go
 
 eval `ssh-agent -s`
 eval "$(direnv hook zsh)"
+fpath=($fpath ~/.zsh/completion)
