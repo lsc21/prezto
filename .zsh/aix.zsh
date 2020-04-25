@@ -1,3 +1,5 @@
+alias deploy-staging="(cd $HOME/Code/infrastructure-staging && git checkout master && zsh ./bin/scripts/update-values.sh STAGING values.yaml) && (cd $HOME/Code/charts && git checkout master &&  haixstaging upgrade --install trade-platform-v2 . --values=$HOME/Code/infrastructure-staging/values.yaml)"
+
 ## Microk8s
 # alias kaixmicro="kubectl --kubeconfig=$HOME/Code/microk8s/kubeconfig"
 # alias haixmicro="KUBECONFIG=$HOME/Code/microk8s/kubeconfig HELM_HOME=$HOME/helm helm"

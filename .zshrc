@@ -18,6 +18,10 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 export SAVEHIST=500000
 export HISTFILE="$HOME/.zhistory"
 export GPG_TTY=$(tty)

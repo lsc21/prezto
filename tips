@@ -6,6 +6,11 @@ CTL-a = - list all paste buffers (for multiline pastes)
 CTL-a b - list (and toogle between) all available sessions
 
 -------------------
+# Zsh
+-------------------
+ESC CTL-x CTL-e - Edit Command Line in Window
+
+-------------------
 # FZF
 -------------------
 - CTL-T - fuzzy filter the files in the current directory
