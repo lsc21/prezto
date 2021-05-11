@@ -6,13 +6,14 @@ filetype off                          " Turn on file type detection.
 set rtp+=~/.vim/bundle/Vundle.vim     " use Vundle
 set rtp+=/usr/local/opt/fzf           " use fuzzy finder
 
+set viminfo+=:1000
+
 " V I M  P L U G
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'mileszs/ack.vim'
-Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
 Plug 'burnettk/vim-angular'
@@ -25,13 +26,19 @@ Plug 'elzr/vim-json'
 Plug 'hashivim/vim-terraform'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hashivim/vim-terraform'
+Plug 'vim-syntastic/syntastic'
+Plug 'juliosueiras/vim-terraform-completion'
+Plug 'hashivim/vim-terraform'
+Plug 'jvirtanen/vim-hcl'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
 filetype plugin indent on             " required
 
 " C O L O R  M A N A G E M E N T
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
 set background=dark
 set term=xterm-256color               " tell vim that its terminal is 256-enabled
 set t_Co=256                          " force vim to use 256
@@ -52,7 +59,6 @@ set shiftwidth=2                      " And again, related.
 set modeline                          " Allow per file config
 set encoding=utf-8                    " UTF-8
 set textwidth=79                      " set normal border; can unset for coding
-set tabstop=2                         " The One True Tab (as of latest revision)
 set modifiable                        " modifiable buffers
 set foldlevel=1                       " self-explanatory
 set laststatus=2                      " required for airline
@@ -114,12 +120,12 @@ let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 let g:airline#extensions#whitespace#show_message = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 0
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 let g:airline_detect_crypt=1
 let g:airline_symbols_ascii = 1
 let g:airline#extensions#branch#vcs_checks = []
 let g:airline_minimalist_showmod = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='base16'
 
 " >>> S Y N T A S T I C <<<
 set statusline+=%#warningmsg#
@@ -146,6 +152,12 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 " au Syntax * syn match localWhitespaceError /\(\zs\%#\|\s\)\+$/ display
 " au Syntax * syn match localWhitespaceError / \+\ze\t/ display
 " autocmd BufWritePre * :%s/\s\+$//e
+"
+" >>> C I R C L E C I  V A L I D A T I O N
+au BufWritePost .circleci/config.yml !circleci config validate <afile>
+
+" >>> J S O N  V A L I D A T O R
+au BufWritePost package.json !jsonlint -q <afile>
 
 " >>> R U B Y  R U N N E R <<<
 " command! FR set filetype=ruby

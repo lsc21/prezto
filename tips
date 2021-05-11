@@ -37,3 +37,10 @@ Commands - List all possible commands
 # JSON
 -------------------
 - cat JSON_FILE_OR_STREAM | fx - process json interactively
+
+-------------------
+# SSH
+-------------------
+Tunnel and Connect to redis server
+ssh -N -L 6379:redis.staging.aixplatform.com:6379 lclotman@jumpbox
+redis-cli -h 127.0.0.1 -p 6379
