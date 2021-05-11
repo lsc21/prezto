@@ -1,7 +1,7 @@
 [user]
   name = Louis Clotman
 	email = louis.clotman@aixplatform.com
-	signingkey = A2BC8C04C657FAD585C791CBD3B7BBFFF4070BC6
+	signingkey = EF85027BFB0823E32F9A17EB7EDD86CC0FBC21ED
 [core]
 	editor = vim
 	excludesfile = /Users/louis/.gitignore_global
@@ -51,7 +51,7 @@
 	renames = copies
 [commit]
 	verbose = true
-	gpgsign = true
+	gpgsign = false
 [advice]
 	detachedHead = false
 [rebase]
@@ -74,3 +74,5 @@
 	program = gpg2
 [credential]
   helper = store
+[pull]
+	ff = only

@@ -2,7 +2,6 @@
 alias     less="less -R"
 #alias     travis='RAILS_ENV=test DO_NOT_ADD_FIPS=true bundle exec rake --trace travis:test'
 alias     git="hub"
-alias     t="travis"
 alias     c="circleci"
 alias     epoch='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s"'
 
@@ -19,4 +18,7 @@ alias     gdns="gcloud dns record-sets list -z feature"
 # Debugging
 alias chrome="/usr/bin/chromium-browser"
 
-
+# Github Hub
+function comment () {
+  $(hub api repos/trade-platform/$1/issues/$2/comments -f body=$3)
+}

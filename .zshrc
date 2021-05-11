@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/snap/bin:$HOME/bin:$HOME/.rbenv/bin:$GOPATH/bin:$HOME/.krew/bin:$PATH
+export PATH=/usr/local/bin:/snap/bin:$HOME/.krew/bin:$HOME/bin:$HOME/.rbenv/bin:$GOPATH/bin:$HOME/.krew/bin:$PATH
 
 [ -f "$HOME/.zprezto/init.zsh" ]                    && . "$HOME/.zprezto/init.zsh"
 [ -f "$HOME/.travis/travis.sh" ]                    && . "$HOME/.travis/travis.sh"
@@ -22,11 +22,15 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-export SAVEHIST=500000
+source $HOME/.zsh/histconfig.zsh
+
 export HISTFILE="$HOME/.zhistory"
 export GPG_TTY=$(tty)
 export GOPATH=$HOME/Code/go
 
-eval `ssh-agent -s`
 eval "$(direnv hook zsh)"
+eval `ssh-agent -s`
 fpath=($fpath ~/.zsh/completion)
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin

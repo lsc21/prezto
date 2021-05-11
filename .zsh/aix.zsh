@@ -1,8 +1,25 @@
-alias deploy-staging="(cd $HOME/Code/infrastructure-staging && git checkout master && zsh ./bin/scripts/update-values.sh STAGING values.yaml) && (cd $HOME/Code/charts && git checkout master &&  haixstaging upgrade --install trade-platform-v2 . --values=$HOME/Code/infrastructure-staging/values.yaml)"
+sops-diff() {
+  # ideally used as a pre-commit hook
+  # must pass in the encrypted file as an arg
+
+  # Generate two random filenames
+  FILENAME_1=/tmp/$(cat /dev/urandom | tr -dc '0-9a-zA-Z' | head -c20)
+  FILENAME_2=/tmp/$(cat /dev/urandom | tr -dc '0-9a-zA-Z' | head -c20)
+
+  # store the decrypted version of the file from mster and your current branch in the temporary locations
+  AWS_PROFILE=$AWS_PROFILE git show $(git rev-parse --abbrev-ref HEAD):$1 | sops -d /dev/stdin | base64 -d > $FILENAME_1
+  AWS_PROFILE=$AWS_PROFILE git show master:$1 | sops -d /dev/stdin | base64 -d > $FILENAME_2
+
+  # diff the files then delete them
+  diff $FILENAME_1 $FILENAME_2 && rm -f $FILENAME_1 $FILENAME_2
+}
 
 ## Microk8s
 # alias kaixmicro="kubectl --kubeconfig=$HOME/Code/microk8s/kubeconfig"
 # alias haixmicro="KUBECONFIG=$HOME/Code/microk8s/kubeconfig HELM_HOME=$HOME/helm helm"
+
+## Git
+alias delete-merged-branches="git for-each-ref --format='%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' refs/heads | xargs -Ibranch_to_delete git branch -D branch_to_delete"
 
 ## EKS
 alias kaixkops="kubectl --kubeconfig=$HOME/Code/alb.aix.clotman.name/kubeconfig"
@@ -13,7 +30,7 @@ alias kaixevents="kubectl --kubeconfig=$HOME/Code/aix-event-service-uat/kubeconf
 alias haixevents="KUBECONFIG=$HOME/Code/aix-event-service-uat/kubeconfig HELM_HOME=$HOME/helm helm"
 
 ## Staging
-alias kaixstaging="kubectl --kubeconfig=$HOME/Code/infrastructure-staging/kubeconfig"
+alias kaixstaging="kubectl-1.18.14 --kubeconfig=$HOME/Code/infrastructure-staging/kubeconfig"
 alias haixstaging="KUBECONFIG=$HOME/Code/infrastructure-staging/kubeconfig HELM_HOME=$HOME/helm helm"
 alias staging-certs='kaixstaging annotate ingress/sign-service kubernetes.io/ingress.class- && kaixstaging annotate ingress/sign-service kubernetes.io/tls-acme- && kaixstaging annotate ingress/sign-service kubernetes.io/ingress.class=nginx && kaixstaging annotate ingress/sign-service kubernetes.io/tls-acme="true"'
 
@@ -55,3 +72,7 @@ alias circle-job="circleci local execute -c circle_process.yml --job"
 [ -f "$HOME/.travis/travis.sh" ] && . "$HOME/.travis/travis.sh"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+
+# galen completion 
+#
+export PATH=$HOME/.rbenv/versions/2.7.0/bin:$PATH
